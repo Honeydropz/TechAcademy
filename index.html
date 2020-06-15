@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH ACADEMY</title>
+    <style>
+        nav{
+            width: 100%;
+            background:rgb(2, 2, 41);
+            overflow:auto;
+        }
+        ul {
+            padding:0;
+            margin: 0 0 0 300px;
+            margin-right: 30px;
+            list-style: none;
+        }
+        li{
+            float: right;
+        }
+        .logo img{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 30px;
+        }
+        nav a{
+            widows: 100px;
+            display: block;
+            padding: 20px 15px;
+            text-decoration: none;
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+        nav a:hover {
+            transition:0.5s;
+            text-transform:uppercase;
+        }
+        .btn {
+            font-family: arial;
+            text-transform: uppercase;
+            font-size: 12px;
+            width: 80px;
+            height: 1px;
+            border-radius: 15px;
+            line-height: 2px;
+            text-align: center;
+            border:2px solid teal;
+            display:block;
+            text-decoration: none;
+            margin: 10px auto;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            transition: .3s;
+            cursor: pointer;
+        }
+        .btn::before {
+            content: '';
+            width:100%;
+            height:100%;
+            position:absolute;
+            background:white;
+            top:-100%;
+            left: 0;
+            z-index:-1;
+            transition: .8s;
+        }
+        .btn::after {
+            content:'';
+            width:100%;
+            height:100%;
+            position:absolute;
+            background:white;
+            top:-100%;
+            left: 0;
+            z-index:-1;
+            transition: .8s;
+        }
+        .btn:hover {
+            background-color: teal;
+            color: white;
+        }
+        .btn:hover::before {
+            top:0;
+        }
+        .btn:hover::after {
+            top:0;
+        }
+        .banner{
+            position: relative;  width: "50%"; margin: auto;
+            
+        }
+        .banner img{width:100%}
+        .heading{
+            color:white;
+            position:absolute;
+            top: 10%;
+            left: 5%;
+            width:100%;
+            text-align: top;
+            font-size: 90px;
+        }
+        .heading2{
+            color:teal;
+            position:absolute;
+            text-align: center;
+            width:100%;
+            top: 76%;
+            font-size: 60px;
+        }
+        .text {
+            width:100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:black;
+            font-size: 2vw;
+        }
+        .button {
+            position: absolute;
+            top: 57%;
+            left: 11%;
+            transform: translate(-50%,-50%);
+        }
+        .word {
+            position: absolute;
+            top: 48%;
+            left: 18%;
+            transform: translate(-50%,-50%);
+            font-style: italic;
+            font-family:arial;
+            color:white
+        }
+        .bttn{
+            border: 2px solid white;
+            padding:10px 30px;
+            border-radius: 15px;
+            color:white;
+            text-decoration: none;
+            transition: 0.6s ease;
+        }
+        .bttn:hover{
+            border: 2px solid teal;
+            background-color:teal;
+            color:white;
+        }
+        .bttn1{
+            border: 2px solid teal;
+            padding:10px 30px;
+            border-radius: 15px;
+            color:black;
+            text-decoration: none;
+            transition: 0.6s ease;
+        }
+        .bttn1:hover{
+            border: 2px solid teal;
+            background-color:teal;
+            color:white;
+        }
+        .table {
+            width:100%;
+            border-spacing: 5px;
+            text-align: center;
+            padding: 15px;
+            border:none;
+            top: 78%;
+        }
+        .float{
+            padding-top: 60px;
+            margin-left: 90px;
+            display: flex;
+        }
+        .same {
+            width: 100%;
+            float: right;
+            margin-right: 1.33%;
+            padding:5px 40px;
+            color:black;
+            text-decoration: none;
+            
+        }
+      
+        .center{
+            display:block;
+            margin-right: auto;
+            margin-left: auto;
+            width:50%;
+
+        }
+        .img1{
+            border-radius: 50%;
+        }  
+        .box{
+            text-align:left;
+            font-size: 20px;
+            
+        }
+        .regform{
+            width:455px;
+            background-color: teal;
+            margin:auto;
+            color:white;
+            padding: 2px 0px 2px 0px;
+            text-align:center;
+            border-radius: 15px 15px 0px 0px;
+        }
+        .main{
+            background-color:white;
+            width:450px;
+            height:390px;
+            margin:auto;
+            border:2px solid teal;
+        }
+        form{
+            padding:5px
+        }
+        #name{
+            width:100%;
+            height:25px;
+        }
+        .name{
+            margin-top: 30px;
+            margin-left: 25px;
+            width:55px;
+            color:black;
+            font-size: 18px;
+        }
+        .firstname{
+            position: relative;
+            left:80px;
+            top:-37px;
+            line-height: 30px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            width: 130px;
+            border:1px solid teal;
+        }
+        .lastname{
+            position: relative;
+            left:180px;
+            top:-71px;
+            line-height: 30px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            width:130px;
+            border:1px solid teal;
+        }
+        .firstlabel{
+            position: relative;
+            color:black;
+            text-transform: capitalize;
+            font-size: 14px;
+            left:80px;
+            top:-45px;
+        }
+        .lastlabel{
+            position: relative;
+            color:black;
+            text-transform: capitalize;
+            font-size: 14px;
+            left:250px;
+            top:-73px;
+        }
+        .email{
+            position: relative;
+            left:80px;
+            top: -40px;
+            line-height:30px;
+            width:300px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            color: black;
+            border:1px solid teal;
+        }
+        .number{
+            position: relative;
+            left:80px;
+            top: -40px;
+            line-height:30px;
+            width:300px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            color: black;
+            border:1px solid teal;
+        }
+        .option{
+            position: relative;
+            left:80px;
+            top: -40px;
+            line-height:30px;
+            width:300px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            color: black;
+            outline: none;
+            overflow: hidden;
+            border:1px solid teal;
+        }
+       
+        .option1{
+            position: relative;
+            left:80px;
+            top: -40px;
+            line-height:30px;
+            width:300px;
+            border-radius: 10px;
+            padding:0 10px;
+            font-size: 16px;
+            color: black;
+            outline: none;
+            overflow: hidden;
+            border:1px solid teal;
+        }        
+        button{
+            background-color: white;
+            display: block;
+            margin:20px 0px 0px 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid teal;
+            padding: 10px 50px;
+            outline:none;
+            color:black;
+            cursor: pointer;
+            transition: 0.3px;
+            margin-left: 150px;
+        }
+        button:hover{
+            background-color: teal;
+        }
+        .heading3{
+            text-align: left;
+            color: black;
+           margin-left:520px;
+           font-size: 40px;
+
+        }
+    </style>
+    </head>
+<body>
+ <div class ="logo"><a href ="#"><img src ="lOGO.png" height="50" ></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#" class="btn"> Apply Now !</a></li>
+            <li><a href="#"> Careers</a></li>
+            <li><a href="#"> News</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#"> Courses</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="banner">
+                <img src="BG.jpg" height="430px">
+                <h1 class="heading">
+                    Tech Academy <br>
+                </h1>     
+            </div>
+        </div>
+       
+        <div class="word">
+            <h5>
+                Our courses are tailored to prepare participants<br> for the ever growing tech ecosystem.
+            </h5>
+        </div>
+        <div class="button">
+            <a href="#" class="bttn">Join Us !</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="heading2">Our Professional Courses</h1>
+    </div>
+    <div class="float">
+        <div class="same">
+            <h4> UI/UX <br><br>
+                User interface design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience.
+                <br><br>
+            </h4>
+            <a href="#" class="bttn1">Learn More..</a>
+        </div>
+        <div class="same">
+            <h4> WEB DEVELOPMENT <br><br>
+                Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.
+            </h4>
+            <a href="#" class="bttn1">Learn More..</a>
+        </div>
+        <div class="same">
+            <h4> DESIGN THINKING<br><br>
+                Design thinking refers to the cognitive, strategic and practical processes by which design concepts (proposals for new products, buildings, machines, etc.) are developed.
+                <br>
+                <br><br><br><br>
+            </h4>
+            <a href="#" class="bttn1">Learn More..</a>
+        </div>
+    </div>
+    <br>
+    
+    <div class="float">
+        <div class="same">
+            <h1>Here is what our 2020 Participant has to say...</h1>
+            <img src="me.JPG" class="img1" style="float:none; margin-left: 100px; margin-top: 20px;" width="200" height="200" >
+            <p style="font-style: oblique;" class="box">"TECH ACADEMY made me see coding in a different way.<br>
+                 I always had the thought that it was an impossible task for me.<br> Thanks to the facilitators and teachers, i now have a better<br> understanding and i feel ready to advance in my tech career"<br>
+                 <h3>Kudirat</h3></p>
+            
+        </div>
+        <div class="same">
+            <div class="regform"><h2>To be part of our program <br>Apply here</h2></div>
+        <div class="main">
+            <form>
+                <div id="name">
+                    <h2 class="name">Name</h2>
+                    <input class="firstname" type="text" name="first_name"><br>
+                    <label class="firstlabel">first name</label>
+                    <input class="lastname" type="text" name="last_name"><br>
+                    <label class="lastlabel">last name</label>
+                </div>
+                <div id="name">
+                    <h2 class="name">Email</h2>
+                    <input class="email" type="text" name="email">
+                </div>
+                <div id="name">
+                    <h2 class="name">Phone</h2>
+                    <input class="number" type="text" name="phone">
+                </div>
+                <div id="name">
+                    <h2 class="name"> Track</h2>
+                <select class="option" name="track">
+                    <option disabled="disabled" selected="selected">
+                        --Choose Track
+                    </option>
+                    <option>UI/UX</option>
+                    <option>WEB DEVELOPMENT</option>
+                    <option>DESIGN THINKING</option>
+                </select>
+                </div>
+                <div id="name">
+                    <h2 class="name"> Level</h2>
+                    <select class="option1" name="Level">
+                        <option disabled="disabled" selected="selected">
+                            --Choose Level
+                        </option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Expert</option>
+                    </select>
+                </div>                        
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+        
+        
+      
+    
+    
+   
+   
+   
+</body>
+</html>
